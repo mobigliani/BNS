@@ -1,0 +1,74 @@
+/*
+Theme Name: Brotherhood
+Theme URI:
+Author: Matta
+Author URI: 
+Template: twentythirteen
+Description: A child theme of Twentythirteen for Bractwo Najświętszego Sakramentu Diecezji Gliwickiej.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, translation-ready, accessibility-ready
+Text Domain: brotherhood
+*/
+
+html,
+button,
+input,
+select,
+textarea {
+	font-family: "PT Serif", Georgia, serif;
+}
+
+body {
+	font-weight: 400;
+	font-style: normal;
+	font-size: 17px;
+	line-height: 25px;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Cantata One", Georgia, serif;
+	font-weight: 400;
+}
+
+dl {
+	margin: 0 1em;
+}
+
+dd {
+	margin: 0 0 1em 1em;
+}
+
+ul.nav-menu,
+div.nav-menu > ul {
+	font-family: "Cantata One", Georgia, serif;
+}
+
+.nav-menu li a {
+	font-size: 1.2em;
+}
+
+.nav-menu .current_page_item > a,
+.nav-menu .current_page_ancestor > a,
+.nav-menu .current-menu-item > a,
+.nav-menu .current-menu-ancestor > a {
+   font-style: normal;
+}
+
+.widget .widget-title {
+	font: 100 20px "Cantata One", Helvetica, sans-serif;
+}
+
+.site-info {
+	padding: 20px 0;
+}
