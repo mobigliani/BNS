@@ -12,6 +12,12 @@ Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, 
 Text Domain: brotherhood
 */
 
+
+/**
+ * 1.0 Reset
+ * ----------------------------------------------------------------------------
+ */
+
 html,
 button,
 input,
@@ -41,6 +47,15 @@ h6 {
 	font-weight: 400;
 }
 
+h1 {
+	font-size: 40px;
+	margin: 33px 0;
+}
+
+p {
+	margin: 0 0 1em;
+}
+
 dl {
 	margin: 0 1em;
 }
@@ -48,6 +63,80 @@ dl {
 dd {
 	margin: 0 0 1em 1em;
 }
+
+/**
+ * 3.0 Basic Structure
+ * ----------------------------------------------------------------------------
+ */
+
+.site-main .sidebar-container {
+	top: 45px;
+}
+
+.site-main .sidebar-inner {
+	margin: 0 auto;
+	max-width: 1040px;
+}
+
+/**
+ * 4.0 Header
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * 4.1 Site Header
+ * ----------------------------------------------------------------------------
+ */
+
+.site-header .home-link {
+	color: #141412;
+	display: block;
+	margin: 0 auto;
+	max-width: 1080px;
+	min-height: 230px;
+	padding: 0 20px;
+	text-decoration: none;
+	width: 100%;
+}
+
+ .site-header .site-title:hover {
+	text-decoration: none;
+}
+
+.site-title {
+	font-size: 40px;
+   font-weight: normal;
+	line-height: 1;
+   padding: 10px 0 10px;
+   text-align: center;
+   white-space: nowrap;
+ 
+   bottom: 0;
+   color: #fff;
+
+   text-shadow:
+      0 0 3px #926e2a,
+      0 0 3px #926e2a;
+}
+
+.site-description {
+	font: 100 20px "Cantata One", Helvetica, sans-serif;
+   font-weight: normal;
+   color: #fff;
+	margin: 0;
+   padding: 125px 0 10px;
+   text-align: center;
+   white-space: nowrap;
+
+   text-shadow:
+    0 0 3px #926e2a,
+    0 0 3px #926e2a;
+}
+
+/**
+ * 4.2 Navigation
+ * ----------------------------------------------------------------------------
+ */
 
 ul.nav-menu,
 div.nav-menu > ul {
@@ -65,10 +154,194 @@ div.nav-menu > ul {
    font-style: normal;
 }
 
+/**
+ * 6.1 Widgets
+ * ----------------------------------------------------------------------------
+ */
+
+.widget {
+   border-top-right-radius: 25px;
+   padding-top: 0;
+}
+
+.site-main .widget-title {
+   background: linear-gradient(to right, rgba(250, 222, 143, 1), rgba(250, 222, 143, 0));
+   border-top-right-radius: 25px;
+   position: relative;
+   left: -20px;
+   height: 2em;
+   padding: 0.4em 1em;
+}
+
 .widget .widget-title {
 	font: 100 20px "Cantata One", Helvetica, sans-serif;
+   margin-bottom: 1em;
 }
+
+/**
+ * 7.0 Footer
+ * ----------------------------------------------------------------------------
+ */
 
 .site-info {
 	padding: 20px 0;
+}
+
+/**
+ * 8.0 Media Queries
+ * ----------------------------------------------------------------------------
+ */
+
+@media (max-width: 767px) {
+	.site-header .home-link {
+		min-height: 110px;
+	}
+	.site-title {
+		font-size: 1.2em;
+		padding: 8px 0 10px;
+   text-shadow:
+    0 0 2px #926e2a,
+    0 0 2px #926e2a;
+	}
+   .site-description {
+      display: none;
+   }
+}
+
+@media (max-width: 643px) {
+	.site-title {
+		font-size: 20.4px;
+	}
+	/* Small menu */
+	.menu-toggle {
+		cursor: pointer;
+		display: inline-block;
+		font: 400 1.2em "Cantata One", Helvetica, sans-serif;
+		margin: 0;
+	}
+}
+
+/* Mobile devices */
+@media (max-width: 359px) {
+	.site-header .home-link {
+		min-height: 50px;
+	}
+	.site-title {
+		display: none;
+	}
+	.site-description {
+		display: none;
+	}
+}
+
+/**
+ * 5.9 Archives
+ * ----------------------------------------------------------------------------
+ */
+
+.archive-title,
+.archive-meta {
+   font: 400 30px "Cantata One", Georgia, serif;
+	margin: 0 auto;
+	max-width: 1040px;
+	padding: 30px 0;
+	width: 100%;
+   
+   text-shadow:
+    0 0 1px #d4cea5,
+    0 0 1px #d4cea5,
+    0 0 1px #d4cea5,
+    0 0 1px #d4cea5;
+}
+
+h1.archive-title {
+   color: #fff;
+}
+
+/**
+ * 5.10 Search Results/No posts
+ * ----------------------------------------------------------------------------
+ */
+
+.page-header {
+	background-color: #e8e5ce;
+}
+
+.page-title {
+	font: 400 30px "Cantata One", Georgia, serif;
+   text-shadow:
+    0 0 2px #c4be95,
+    0 0 2px #c4be95,
+    /* 0 0 2px #d4cea5, */
+    0 0 2px #c4be95;
+}
+
+h1.page-title {
+   color: #fff;
+}
+
+
+
+/**
+ * ----------------------------------------------------------------------------
+ * Google Calendar Events Plug-in styles
+ * https://wordpress.org/plugins/google-calendar-events/
+ * ----------------------------------------------------------------------------
+ */
+
+/* Month & list titles for all views */
+
+.gce-month-title,
+.gce-list-title {
+	font-weight: 700;
+	font-size: 1em;
+	padding-bottom: 1em;
+}
+
+/* Event titles with shaded background for all views */
+
+.gce-list-event,
+.gce-tooltip-event {
+   background-color: transparent;
+	font-weight: 700;
+	font-size: 1.4em;
+   line-height: 1.2em;
+   padding: 0;
+   margin-bottom: 0.2em;
+}
+
+/* PAGE LIST */
+
+.gce-page-list .gce-feed {
+	padding-bottom: 2em;
+}
+
+/* WIDGET LIST */
+
+.gce-widget-list .gce-feed {
+	padding-bottom: 1em;
+}
+
+/**
+ * Brotherhood specific settings.
+ */
+
+div.gce-bh-info {
+   margin-top: 0.5em;
+   margin-left: 0.5em;
+   padding-left: 0.5em;
+   border-left: 0.3em solid rgb(247, 245, 231);
+}
+
+div.gce-bh-description {
+   margin-top: 1em;
+   margin-bottom: 1em;
+}
+
+div.gce-bh-location a:before {
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+   font: normal 1.2em Genericons;
+	vertical-align: text-bottom;
+   content: "\f417";
 }
