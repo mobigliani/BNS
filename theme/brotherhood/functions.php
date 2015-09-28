@@ -138,6 +138,7 @@ function twentythirteen_paging_nav() {
  * genitive form.
  * To use it throughout the whole Wordpress site add filter for date_i18n
  * routine.
+ * Thanks to Vokiel.
  *
  * @param string $format Date and time format string.
  * @param int $timestamp Unix timestamp.
