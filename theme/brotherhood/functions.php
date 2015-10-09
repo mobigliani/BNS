@@ -1,4 +1,4 @@
-﻿   <?php
+﻿<?php
 /**
  * Brotherhood theme functions and definitions
  *
@@ -19,6 +19,9 @@
  * For more information on hooks, actions, and filters, @link http://codex.wordpress.org/Plugin_API
  *
  */
+
+// Remove version info for security reasons.
+remove_action('wp_head', 'wp_generator');
 
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
@@ -109,27 +112,27 @@ add_action( 'after_setup_theme', 'brotherhood_custom_header_setup', 11 );
  *
  */
 function twentythirteen_paging_nav() {
-   global $wp_query;
+	global $wp_query;
 
-   // Don't print empty markup if there's only one page.
-   if ( $wp_query->max_num_pages < 2 )
-      return;
-   ?>
-   <nav class="navigation paging-navigation" role="navigation">
-      <h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'twentythirteen' ); ?></h1>
-      <div class="nav-links">
+	// Don't print empty markup if there's only one page.
+	if ( $wp_query->max_num_pages < 2 )
+		return;
+	?>
+	<nav class="navigation paging-navigation" role="navigation">
+		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'twentythirteen' ); ?></h1>
+		<div class="nav-links">
 
-         <?php if ( get_next_posts_link() ) : ?>
-         <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentythirteen' ), TRUE ); ?></div>
-         <?php endif; ?>
+			<?php if ( get_next_posts_link() ) : ?>
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentythirteen' ), TRUE ); ?></div>
+			<?php endif; ?>
 
-         <?php if ( get_previous_posts_link() ) : ?>
-         <div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentythirteen' ), TRUE ); ?></div>
-         <?php endif; ?>
+			<?php if ( get_previous_posts_link() ) : ?>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentythirteen' ), TRUE ); ?></div>
+			<?php endif; ?>
 
-      </div><!-- .nav-links -->
-   </nav><!-- .navigation -->
-   <?php
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	<?php
 }
 
 /**
