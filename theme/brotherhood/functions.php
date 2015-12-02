@@ -176,3 +176,40 @@ function polish_date_filter($j, $req_format, $i, $gmt) {
 
 // Add Polish date filter.
 add_filter( 'date_i18n',  polish_date_filter, 10, 3 );
+
+
+/* ***************************************************************************
+ * Image size generation handling.
+ *****************************************************************************/
+
+// Filter out unneeded WP images sizes.
+function bns_filter_image_sizes($sizes) {
+
+	// unset( $sizes['thumbnail']); // 150x150
+	unset( $sizes['medium']); // 300x300
+	unset( $sizes['large']); // 1024x1024
+	unset( $sizes['post-thumbnail']); // 604x270
+	// wc-gallery:
+	// unset( $sizes['wcsquare']);
+	// unset( $sizes['wcstandard']);
+	// unset( $sizes['wcicon']);
+	// unset( $sizes['wcbig']);
+	// unset( $sizes['wcsmall']);
+	// unset( $sizes['fixedheightsmall']);
+	// unset( $sizes['fixedheightmedium']);
+	// unset( $sizes['fixedheight']);
+	// unset( $sizes['carouselsmall']);
+	// unset( $sizes['carousel']);
+	// unset( $sizes['slider']);
+
+	return $sizes;
+}
+add_filter('intermediate_image_sizes_advanced', 'bns_filter_image_sizes');
+
+
+// Check if wc-gallery is available.
+if (function_exists('wc_gallery_shortcode')) {
+	global $wc_gallery_theme_support;
+	// Empty the array to not to generate additional sizes.
+	$wc_gallery_theme_support = array();
+}
