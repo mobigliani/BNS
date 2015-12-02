@@ -73,6 +73,10 @@ dd {
 	top: 45px;
 }
 
+.site-main {
+   min-height: 35em;
+}
+
 .site-main .sidebar-inner {
 	margin: 0 auto;
 	max-width: 1040px;
