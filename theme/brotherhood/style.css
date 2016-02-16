@@ -159,6 +159,33 @@ div.nav-menu > ul {
 }
 
 /**
+ * 5.0 Content
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * 5.1.1 Recent Entries Header
+ * ----------------------------------------------------------------------------
+ */
+
+.sidebar .entries-header {
+	max-width: 1040px;
+	margin: 4em auto 2em auto;
+	width: 100%;
+	text-align: center;
+	padding: 0 376px 0 60px;
+}
+
+/**
+ * 5.5 Post Formats
+ * ----------------------------------------------------------------------------
+ */
+
+article:first-child {
+	padding-top: 3em;
+}
+
+/**
  * 6.1 Widgets
  * ----------------------------------------------------------------------------
  */
@@ -191,6 +218,12 @@ div.nav-menu > ul {
 	padding: 20px 0;
 }
 
+.site-footer .sidebar-container {
+	background-image: url(images/footer_bg.jpg);
+	box-shadow: inset 20px 20px 50px rgba(0, 0, 0, 0.5);
+	padding: 3em 0;
+}
+
 /**
  * 8.0 Media Queries
  * ----------------------------------------------------------------------------
@@ -213,6 +246,11 @@ div.nav-menu > ul {
 }
 
 @media (max-width: 643px) {
+   #content .entries-header {
+		padding-left: 20px;
+		padding-right: 20px;
+   }
+
 	.site-title {
 		font-size: 20.4px;
 	}
