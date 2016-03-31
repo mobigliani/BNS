@@ -170,7 +170,7 @@ function date_pl($format, $timestamp = null) {
  * Polish date filter.
  * @uses date_pl() to format date and time.
  */
-function polish_date_filter($j, $req_format, $i, $gmt) {
+function polish_date_filter($j, $req_format, $i) {
    return date_pl( $req_format, $i );
 }
 
