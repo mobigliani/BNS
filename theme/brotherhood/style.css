@@ -234,7 +234,7 @@ article:first-child {
 		min-height: 110px;
 	}
 	.site-title {
-		font-size: 1.2em;
+		font-size: 30px;
 		padding: 8px 0 10px;
    text-shadow:
     0 0 2px #926e2a,
@@ -252,7 +252,7 @@ article:first-child {
    }
 
 	.site-title {
-		font-size: 20.4px;
+		font-size: 17px;
 	}
 	/* Small menu */
 	.menu-toggle {
